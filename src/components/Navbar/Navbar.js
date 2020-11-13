@@ -6,7 +6,7 @@ const Navbar = () => {
     <React.Fragment>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="/">
-          Navbar
+          SastaBlogger
         </a>
         <button
           className="navbar-toggler"
@@ -25,11 +25,7 @@ const Navbar = () => {
                 Home<span className="sr-only">(current)</span>
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/user/add">
-                Add User
-              </NavLink>
-            </li>
+         
           </ul>
         </div>
       </nav>

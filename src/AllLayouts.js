@@ -1,13 +1,14 @@
 import React from "react";
 import HomeLayouts from "./components/layouts/HomeLayouts/HomeLayouts";
 import AddUser from "./pages/AddUser";
-import EditUserPage from "./pages/EditUserPage";
-import UsersList from "./pages/UsersList";
+import CreatePostPage from "./pages/CreatePostPage";
+import EditPostPage from "./pages/EditPostPage";
+import PostListPage from "./pages/PostListPage";
 import ViewUser from "./pages/ViewUser";
 
 export const Home = () => (
   <HomeLayouts>
-    <UsersList />
+    <PostListPage/>
   </HomeLayouts>
 );
 
@@ -17,9 +18,9 @@ export const AddUserForm = () => (
   </HomeLayouts>
 );
 
-export const EditUser = () => (
+export const EditPost = () => (
   <HomeLayouts>
-    <EditUserPage />
+      <EditPostPage/>
   </HomeLayouts>
 );
 
@@ -28,3 +29,9 @@ export const ViewUserPage = () => (
     <ViewUser />
   </HomeLayouts>
 );
+
+export const CreatePost = () => (
+  <HomeLayouts>
+    <CreatePostPage/>
+  </HomeLayouts>
+)
