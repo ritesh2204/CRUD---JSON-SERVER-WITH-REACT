@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner'
 
 
 const PostList = ({ posts, loading, handleDelete}) => {
-  const [search, setSearch] = useState({
+  const [search] = useState({
     searchQuery: null
   })
 

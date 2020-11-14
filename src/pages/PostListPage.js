@@ -1,17 +1,16 @@
 /* eslint-disable no-restricted-globals */
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+
 import axios from "axios";
 import PostList from "../components/PostList/PostList";
 import AddButton from "../components/AddButton";
 
 const PostListPage = () => {
-  const { id } = useParams();
+ 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-   
     loadPosts();
   }, []);
 
@@ -21,7 +20,7 @@ const PostListPage = () => {
     setLoading(true)
   };
 
-  const handleDelete = async (id) => {
+  const handleDelete = async id => {
     await axios.delete(`http://localhost:5000/posts/${id}`);
     loadPosts();
   };

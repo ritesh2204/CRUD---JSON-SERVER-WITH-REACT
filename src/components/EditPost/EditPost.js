@@ -16,15 +16,14 @@ const [post, setPost] = useState({
 })
 
 useEffect(() => {
-loadUsers()
-},[])
+  loadUsers()
+}, [])
 
-async function loadUsers(){
+const loadUsers = async () => {
     const result = await axios.get(`http://localhost:5000/posts/${id}`)
     setPost(result.data)
     console.log(result)
 }
-
 
 const handleChange = (e) => {
     setPost({

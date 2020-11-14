@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, } from "react-router-dom";
 import axios from "axios";
 
 const ViewUser = () => {
   const { id } = useParams();
-  let history = useHistory();
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -12,15 +12,19 @@ const ViewUser = () => {
     website: "",
   });
 
-  useEffect(() => {
-    loadUsers();
-  }, []);
 
   const loadUsers = async () => {
     const result = await axios.get(`http://localhost:5000/users/${id}`);
     console.log(result.data);
     setUser(result.data);
   };
+
+  
+  useEffect(() => {
+    loadUsers();
+  }, []);
+
+ 
 
   const { name, email, phone, website } = user;
   return (

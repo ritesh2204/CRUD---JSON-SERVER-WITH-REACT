@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AddUserForm from "../components/UserCreateForm/AddUserForm";
 
 const AddUser = () => {
